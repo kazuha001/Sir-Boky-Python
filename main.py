@@ -1,48 +1,142 @@
 
-arraysForLogIn = []
+arraysForFirst = []
+
+arraysForLast = []
+
+arraysForAge = []
+
+arraysForBirth = []
+
+arraysForUser = []
+
+arraysForPass = []
 
 print("")
 
 print("Dentist Appointment System")
+loop1 = True
 
-print("")
-
-print("Create New Account")
-
-print("1. Create New Account")
-
-print("2. Log in Existing Account")
-
-def apointment():
+while loop1:
 
     print("")
 
     print("Create New Account")
 
-    print("")
+    print("1. Create New Account")
 
-    fnameId = input("Enter your first Name: ")
+    print("2. Log in Existing Account")
 
-    print("")
+    def createAccount():
 
-    lnameId = input("Enter your Last Name: ")
+        print("")
+
+        print("Personal Information")
+
+        print("")
+
+        fnameId = input("Enter your First Name: ")
+        arraysForFirst.append(fnameId)
+
+        print("")
+
+        lnameId = input("Enter your Last Name: ")
+        arraysForLast.append(lnameId)
+
+        print("")
+
+        birthId = int(input("Enter your Age: "))
+        arraysForAge.append(birthId)
+
+        print("")
+
+        birthIdresult = int(2024 - birthId)
+        arraysForBirth.append(birthIdresult)
     
-    print("")
+        print("")
 
-    birthId = int(input("Enter your Age: "))
+        print("Create New User...")
 
-    print("")
+        print("")
 
-    birthIdresult = int(2024 - birthId)
+        userId = input("Enter your Username: ")
+        arraysForUser.append(userId)
+
+
+        print("")
+
+        loop0 = True
     
-    arraysForLogIn.append(birthIdresult)
+        while loop0:
 
-    print(fnameId, lnameId, birthIdresult)
+            passId = input("Enter your Password: ")
+
+            passId_confirm = input("Confirm your Password: ")
+
+            if passId_confirm != passId:
+
+                loop0 = True
+
+                print("Incorrect Confirmation Password")
+
+            else:
+
+                print("Submitted Successfully")
+                arraysForPass.append(passId_confirm)
+            
+                break
+
     
 
-choose = input("Choose: ")
 
-if choose == '1':
-    apointment()
-else:
-    print("exit")
+    def logInAccount():
+
+        loop2 = True
+
+        while loop2:
+            
+            print("Username: ")
+            inputUserId = input()
+            print("Password: ")
+            inputPassId = input()
+
+            indexUserId = arraysForUser.index(inputUserId)
+
+            indexPassId = arraysForPass.index(inputPassId)
+
+            if inputUserId in arraysForUser and inputPassId in arraysForPass:
+
+                if indexUserId != indexPassId:
+
+                    print("Invalid Password... ")
+
+                    loop2 = True
+                
+                else:
+
+                    print("Sucessfully Log In... ")
+
+                    break
+            
+            else:
+
+                print("No Existing Account")
+
+    
+    loop1 = True
+
+    choose = input("Choose: ")
+
+    if choose == '1':
+
+        createAccount()
+
+
+    elif choose == '2':
+
+        logInAccount()
+
+    else:
+        print("exit")
+
+        break
+
