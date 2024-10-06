@@ -7,222 +7,241 @@ arraysForAge = []
 
 arraysForBirth = []
 
-arraysForUser = []
+arraysForMinors = []
 
-arraysForPass = []
+arraysForDates = []
 
-arraysForAppointment = []
+arraysForTime = []
 
-arraysForDoctorOrPatient = []
+arraysForDays = []
 
-loop1 = True
+def appointment():
 
-while loop1:
-    
-    print("")
+    loop1 = True
 
-    print("Dentist Appointment System")
-    
-    print("")
-
-    print("Create New Account")
-
-    print("1. Create New Account")
-
-    print("2. Log in Existing Account")
-
-    def createAccount():
+    while loop1:
 
         print("")
 
-        print("Personal Information")
-
-        print("")
-
-        fnameId = input("Enter your First Name: ")
-        arraysForFirst.append(fnameId)
-
-        print("")
-
-        lnameId = input("Enter your Last Name: ")
-        arraysForLast.append(lnameId)
-
-        print("")
-
-        birthId = int(input("Enter your Age: "))
-        arraysForAge.append(birthId)
-
-        print("")
-
-        birthIdresult = int(2024 - birthId)
-        arraysForBirth.append(birthIdresult)
+        print("Dentist Appointment System")
     
         print("")
-        
-        loop3 = True
-        
-        while loop3:
-        
-            print("You are a Doctor or Patient? ")
-        
-            print("")
-        
-            print("1. Doctor")
-        
-            print("2. Patient")
-        
-            doctorOrpatientId = input("Choose: ")
-        
-            if doctorOrpatientId == '1':
-        
-                doctorOrpatientId_result = "Doctor"
-                
-                arraysForDoctorOrPatient.append(doctorOrpatientId_result)
-             
-                break
-            
-            elif doctorOrpatientId == '2':
-        
-                doctorOrpatientId_result = "Patient"
-                
-                arraysForDoctorOrPatient.append(doctorOrpatientId_result)
-                
-                break
-            
-            else:
-        
-                loop3 = True
-        
-        print("")
 
-        print("Create New User...")
+        print("1. Add New Appointments")
+
+        print("2. Remove Appointments")
+
+        print("3. Update Appointments")
+
+        print("4. Display Appointments")
+
+        print("5. Display all")
+
+        print("0. Exit the Program")
 
         print("")
 
-        userId = input("Enter your Username: ")
-        arraysForUser.append(userId)
+        choose = input("Choose: ")
 
+        if choose == '1':
 
-        print("")
-
-        loop0 = True
-    
-        while loop0:
-
-            passId = input("Enter your Password: ")
-
-            passId_confirm = input("Confirm your Password: ")
-
-            if passId_confirm != passId:
-
-                loop0 = True
-
-                print("Incorrect Confirmation Password")
-
-            else:
-
-                print("Submitted Successfully")
-                arraysForPass.append(passId_confirm)
-            
-                break
-
-    
-
-
-    def logInAccount():
-
-        loop2 = True
-
-        while loop2:
-            
-            print("")
-
-            print("Log In...")
+            fnameId = input("Enter your First Name: ")
+            arraysForFirst.append(fnameId)
 
             print("")
 
-            inputUserId = input("Username: ")
-            inputPassId = input("Password: ")
+            lnameId = input("Enter your Last Name: ")
+            arraysForLast.append(lnameId)
+
+            print("")
+
+            birthId = int(input("Enter your Age: "))
+            arraysForAge.append(birthId)
+
+            print("")
+
+            birthIdresult = int(2024 - birthId)
+            arraysForBirth.append(birthIdresult)
             
-            if inputUserId in arraysForUser and inputPassId in arraysForPass:
             
-                indexUserId = arraysForUser.index(inputUserId)
-
-                indexPassId = arraysForPass.index(inputPassId)
-
-                if indexUserId != indexPassId:
-
-                    print("Invalid Password... ")
-
-                    loop2 = True
+            if birthId <= 18:
+            
+                doctorOrpatientId_result = "Minor"
+                    
+                arraysForMinors.append(doctorOrpatientId_result)
                 
-                else:
-                    
-                    print("")
-
-                    print("Sucessfully Log In... ")
-                    
-                    print("")
-
-                    print("Welcome ", inputUserId)
-
-                    if indexUserId == indexPassId:
-
-                        print("Account Information")
-
-                        print("Account Id No. ", indexUserId)
-                        
-                        fnamePopArrays = arraysForFirst.pop(indexUserId)
-                        
-                        print("Hellow, ", fnamePopArrays)
-
-                        print("")
-
-                        print("Choose... ")
-
-                        print("")
-
-                        print("1. Create New Appointment")
-
-                        print("2. View  Appointment")
-
-                        print("3. Delete Appointment")
-
-                        print("4. Update Appointment")
-
-                        chooseAppointment = input("Choose: ")
-                        
-                        break
-                        
-                        fnamePopArrays = arraysForFirst.pop()
-                        
-                    else:
-
-                        break
-                    
             else:
-                
-                print("")
+            
+                doctorOrpatientId_result = "Adult"
+                    
+                arraysForMinors.append(doctorOrpatientId_result)
+
+            dateId = input("Months: ")
+            arraysForDates.append(dateId)
+
+            print("")
+
+            timeId = input("time: ")
+            arraysForTime.append(timeId)
+
+            print("")
+
+            dayId = input("Days: ")
+            arraysForDays.append(dayId)
+
+            print("")
+
+            print("Sucessfully Submited")
+
+        elif choose == '2':
+
+            print("Users Appointments: ", arraysForFirst)
+
+            nameId = input("Remove: ")
+
+            if nameId in arraysForFirst:
+
+                userId = arraysForFirst.index(nameId)
+
+                arraysForFirst.pop(userId)
+
+                arraysForLast.pop(userId)
+
+                arraysForAge.pop(userId)
+
+                arraysForBirth.pop(userId)
+
+                arraysForMinors.pop(userId)
+
+                arraysForTime.pop(userId)
+
+                arraysForDays.pop(userId)
+
+                arraysForDates.pop(userId)
+
+                print("Remove Sucesfully... ")
+
+            else:
 
                 print("Invalid")
 
-                break
-    
-    loop1 = True
+        elif choose == '3':
 
-    choose = input("Choose: ")
+            print("Update Appointments: ", arraysForFirst)
 
-    if choose == '1':
+            nameId = input("Update: ")
 
-        createAccount()
+            if nameId in arraysForFirst:
+
+                userId = arraysForFirst.index(nameId)
+
+                arraysForFirst.pop(userId)
+
+                arraysForLast.pop(userId)
+
+                arraysForAge.pop(userId)
+
+                arraysForBirth.pop(userId)
+
+                arraysForMinors.pop(userId)
+
+                arraysForTime.pop(userId)
+
+                arraysForDays.pop(userId)
+
+                arraysForDates.pop(userId)
+
+                fnameId = input("Enter your First Name: ")
+                arraysForFirst.insert(userId, fnameId)
+
+                print("")
+
+                lnameId = input("Enter your Last Name: ")
+                arraysForLast.insert(userId, lnameId)
+
+                print("")
+
+                birthId = int(input("Enter your Age: "))
+                arraysForAge.insert(userId, birthId)
+
+                print("")
+
+                birthIdresult = int(2024 - birthId)
+                arraysForBirth.insert(userId, birthIdresult)
+                
+                
+                if birthId <= 18:
+                
+                    doctorOrpatientId_result = "Minor"
+                        
+                    arraysForMinors.insert(userId, doctorOrpatientId_result)
+                    
+                else:
+                
+                    doctorOrpatientId_result = "Adult"
+                        
+                    arraysForMinors.insert(userId,doctorOrpatientId_result)
+
+                dateId = input("Months: ")
+                arraysForDates.insert(userId, dateId)
+
+                print("")
+
+                timeId = input("time: ")
+                arraysForTime.insert(userId, timeId)
+
+                print("")
+
+                dayId = input("Days: ")
+                arraysForDays.insert(userId, dayId)
+
+                print("")
+
+                print("Sucessfully Updated")
+
+            else:
+                
+                print("Invalid")
+        elif choose == '4':
+
+            print("Display Appointments: ", arraysForFirst)
+
+            nameId = input("Display: ")
+
+            if nameId in arraysForFirst:
+
+                userId = arraysForFirst.index(nameId)
+
+                fnameId = arraysForFirst[userId]
+
+                lnameId = arraysForLast[userId]
+
+                birthId = arraysForAge[userId]
+
+                birthIdresult = arraysForBirth[userId]
+
+                dateId = arraysForDates[userId]
+
+                timeId = arraysForTime[userId]
+
+                dayId = arraysForDays[userId]
+
+                print("")
+
+                print("Name:", fnameId, lnameId)
+
+                print("Birth Year:", birthIdresult, "Age:", birthId)
+
+                print("Appointments Scheduled")
+
+                print("Months:", dateId, dayId, "2024","Time:", timeId)
+
+                print("")
 
 
-    elif choose == '2':
+        else:
 
-        logInAccount()
+            break
+        
 
-    else:
-        print("exit")
-
-        break
-
+appointment()
