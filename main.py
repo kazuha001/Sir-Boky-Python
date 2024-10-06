@@ -11,13 +11,18 @@ arraysForUser = []
 
 arraysForPass = []
 
-print("")
+arraysForAppointment = []
 
-print("Dentist Appointment System")
+arraysForDoctorOrPatient = []
+
 loop1 = True
 
 while loop1:
+    
+    print("")
 
+    print("Dentist Appointment System")
+    
     print("")
 
     print("Create New Account")
@@ -52,6 +57,42 @@ while loop1:
         birthIdresult = int(2024 - birthId)
         arraysForBirth.append(birthIdresult)
     
+        print("")
+        
+        loop3 = True
+        
+        while loop3:
+        
+            print("You are a Doctor or Patient? ")
+        
+            print("")
+        
+            print("1. Doctor")
+        
+            print("2. Patient")
+        
+            doctorOrpatientId = input("Choose: ")
+        
+            if doctorOrpatientId == '1':
+        
+                doctorOrpatientId_result = "Doctor"
+                
+                arraysForDoctorOrPatient.append(doctorOrpatientId_result)
+             
+                break
+            
+            elif doctorOrpatientId == '2':
+        
+                doctorOrpatientId_result = "Patient"
+                
+                arraysForDoctorOrPatient.append(doctorOrpatientId_result)
+                
+                break
+            
+            else:
+        
+                loop3 = True
+        
         print("")
 
         print("Create New User...")
@@ -94,16 +135,20 @@ while loop1:
 
         while loop2:
             
-            print("Username: ")
-            inputUserId = input()
-            print("Password: ")
-            inputPassId = input()
+            print("")
 
-            indexUserId = arraysForUser.index(inputUserId)
+            print("Log In...")
 
-            indexPassId = arraysForPass.index(inputPassId)
+            print("")
 
+            inputUserId = input("Username: ")
+            inputPassId = input("Password: ")
+            
             if inputUserId in arraysForUser and inputPassId in arraysForPass:
+            
+                indexUserId = arraysForUser.index(inputUserId)
+
+                indexPassId = arraysForPass.index(inputPassId)
 
                 if indexUserId != indexPassId:
 
@@ -112,15 +157,56 @@ while loop1:
                     loop2 = True
                 
                 else:
+                    
+                    print("")
 
                     print("Sucessfully Log In... ")
+                    
+                    print("")
 
-                    break
-            
+                    print("Welcome ", inputUserId)
+
+                    if indexUserId == indexPassId:
+
+                        print("Account Information")
+
+                        print("Account Id No. ", indexUserId)
+                        
+                        fnamePopArrays = arraysForFirst.pop(indexUserId)
+                        
+                        print("Hellow, ", fnamePopArrays)
+
+                        print("")
+
+                        print("Choose... ")
+
+                        print("")
+
+                        print("1. Create New Appointment")
+
+                        print("2. View  Appointment")
+
+                        print("3. Delete Appointment")
+
+                        print("4. Update Appointment")
+
+                        chooseAppointment = input("Choose: ")
+                        
+                        break
+                        
+                        fnamePopArrays = arraysForFirst.pop()
+                        
+                    else:
+
+                        break
+                    
             else:
+                
+                print("")
 
-                print("No Existing Account")
+                print("Invalid")
 
+                break
     
     loop1 = True
 
