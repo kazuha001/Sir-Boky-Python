@@ -45,6 +45,10 @@ def appointment():
 
         if choose == '1':
 
+            print("")
+            print("Personal Information")
+            print("")
+
             fnameId = input("Enter your First Name: ")
             arraysForFirst.append(fnameId)
 
@@ -76,22 +80,303 @@ def appointment():
                     
                 arraysForMinors.append(doctorOrpatientId_result)
 
+            print("")
+            print("Appointments Details")
+            print("")
+            print("Choose Months")
+            print("")
+            print("1. January")
+            print("2. Febuary")
+            print("3. March")
+            print("4. April")
+            print("5. May")
+            print("6. June")
+            print("7. July")
+            print("8. August")
+            print("9. September")
+            print("10. October")
+            print("11. November")
+            print("12. December")
+            print("")
             dateId = input("Months: ")
-            arraysForDates.append(dateId)
+            
+            if dateId == '1':
+
+                dateId_result = "January"
+
+                print("")
+                print("Choose Days... ")
+                print("1", "2", "3", "4", "5", "6", "7", "8", "9", "10")
+                print("11", "12", "13", "14", "15", "16", "17", "18", "19", "20")
+                print("21", "22", "23", "24", "25", "26", "27", "28", "29", "30")
+                print("31")
+
+                daysId = int(input("Choose: "))
+
+                if daysId >= 31 and daysId <= 0:
+
+                    print("Invalid")
+                    return
+
+                else:
+                    arraysForDates.append(dateId_result)
+                    arraysForDays.append(daysId)
+
+
+            elif dateId == '2':
+                
+                dateId_result = "Febuary"
+
+                print("")
+                print("Choose Days... ")
+                print("1", "2", "3", "4", "5", "6", "7", "8", "9", "10")
+                print("11", "12", "13", "14", "15", "16", "17", "18", "19", "20")
+                print("21", "22", "23", "24", "25", "26", "27", "28", "29", "30")
+                print("31")
+
+                daysId = int(input("Choose: "))
+
+                if daysId >= 31 and daysId <= 0:
+
+                    print("Invalid")
+                    exit()
+                else:
+                    arraysForDates.append(dateId_result)
+                    arraysForDays.append(daysId)
+            elif dateId == '3':
+                
+                dateId_result = "March"
+
+                print("")
+                print("Choose Days... ")
+                print("1", "2", "3", "4", "5", "6", "7", "8", "9", "10")
+                print("11", "12", "13", "14", "15", "16", "17", "18", "19", "20")
+                print("21", "22", "23", "24", "25", "26", "27", "28", "29", "30")
+                print("31")
+
+                daysId = int(input("Choose: "))
+
+                if daysId >= 31 and daysId <= 0:
+
+                    print("Invalid")
+                    exit()
+
+                else:
+                    arraysForDates.append(dateId_result)
+                    arraysForDays.append(daysId)
+            elif dateId == '4':
+                
+                dateId_result = "April"
+
+                print("")
+                print("Choose Days... ")
+                print("1", "2", "3", "4", "5", "6", "7", "8", "9", "10")
+                print("11", "12", "13", "14", "15", "16", "17", "18", "19", "20")
+                print("21", "22", "23", "24", "25", "26", "27", "28", "29", "30")
+                print("31")
+
+                daysId = int(input("Choose: "))
+
+                if daysId >= 31 and daysId <= 0:
+
+                    print("Invalid")
+                    exit()
+
+                else:
+                    arraysForDates.append(dateId_result)
+                    arraysForDays.append(daysId)
+            elif dateId == '5':
+                
+                dateId_result = "May"
+
+                print("")
+                print("Choose Days... ")
+                print("1", "2", "3", "4", "5", "6", "7", "8", "9", "10")
+                print("11", "12", "13", "14", "15", "16", "17", "18", "19", "20")
+                print("21", "22", "23", "24", "25", "26", "27", "28", "29", "30")
+                print("31")
+
+                daysId = int(input("Choose: "))
+
+                if daysId >= 31 and daysId <= 0:
+
+                    print("Invalid")
+                    exit()
+
+                else:
+                    arraysForDates.append(dateId_result)
+                    arraysForDays.append(daysId)
+            elif dateId == '6':
+                dateId_result = "June"
+
+                print("")
+                print("Choose Days... ")
+                print("1", "2", "3", "4", "5", "6", "7", "8", "9", "10")
+                print("11", "12", "13", "14", "15", "16", "17", "18", "19", "20")
+                print("21", "22", "23", "24", "25", "26", "27", "28", "29", "30")
+                print("31")
+
+                daysId = int(input("Choose: "))
+
+                if daysId >= 31 and daysId <= 0:
+
+                    print("Invalid")
+                    exit()
+                else:
+                    arraysForDates.append(dateId_result)
+                    arraysForDays.append(daysId)
+            elif dateId == '7':
+                dateId_result = "July"
+
+                print("")
+                print("Choose Days... ")
+                print("1", "2", "3", "4", "5", "6", "7", "8", "9", "10")
+                print("11", "12", "13", "14", "15", "16", "17", "18", "19", "20")
+                print("21", "22", "23", "24", "25", "26", "27", "28", "29", "30")
+                print("31")
+
+                daysId = int(input("Choose: "))
+
+                if daysId >= 31 and daysId <= 0:
+
+                    print("Invalid")
+                    exit()
+
+                else:
+                    arraysForDates.append(dateId_result)
+                    arraysForDays.append(daysId)
+            elif dateId == '8':
+                dateId_result = "August"
+
+                print("")
+                print("Choose Days... ")
+                print("1", "2", "3", "4", "5", "6", "7", "8", "9", "10")
+                print("11", "12", "13", "14", "15", "16", "17", "18", "19", "20")
+                print("21", "22", "23", "24", "25", "26", "27", "28", "29", "30")
+                print("31")
+
+                daysId = int(input("Choose: "))
+
+                if daysId >= 31 and daysId <= 0:
+
+                    print("Invalid")
+                    exit()
+
+                else:
+                    arraysForDates.append(dateId_result)
+                    arraysForDays.append(daysId)
+            elif dateId == '9':
+                dateId_result = "September"
+
+                print("")
+                print("Choose Days... ")
+                print("1", "2", "3", "4", "5", "6", "7", "8", "9", "10")
+                print("11", "12", "13", "14", "15", "16", "17", "18", "19", "20")
+                print("21", "22", "23", "24", "25", "26", "27", "28", "29", "30")
+                print("31")
+
+                daysId = int(input("Choose: "))
+
+                if daysId >= 31 and daysId <= 0:
+
+                    print("Invalid")
+                    exit()
+
+                else:
+                    arraysForDates.append(dateId_result)
+                    arraysForDays.append(daysId)
+            elif dateId == '10':
+                dateId_result = "October"
+
+                print("")
+                print("Choose Days... ")
+                print("1", "2", "3", "4", "5", "6", "7", "8", "9", "10")
+                print("11", "12", "13", "14", "15", "16", "17", "18", "19", "20")
+                print("21", "22", "23", "24", "25", "26", "27", "28", "29", "30")
+                print("31")
+
+                daysId = int(input("Choose: "))
+
+                if daysId >= 31 and daysId <= 0:
+
+                    print("Invalid")
+                    exit()
+
+                else:
+                    arraysForDates.append(dateId_result)
+                    arraysForDays.append(daysId)
+            elif dateId == '11':
+                dateId_result = "November"
+
+                print("")
+                print("Choose Days... ")
+                print("1", "2", "3", "4", "5", "6", "7", "8", "9", "10")
+                print("11", "12", "13", "14", "15", "16", "17", "18", "19", "20")
+                print("21", "22", "23", "24", "25", "26", "27", "28", "29", "30")
+                print("31")
+
+                daysId = int(input("Choose: "))
+
+                if daysId >= 31 and daysId <= 0:
+
+                    print("Invalid")
+                    exit()
+
+                else:
+                    arraysForDates.append(dateId_result)
+                    arraysForDays.append(daysId)
+            elif dateId == '12':
+                dateId_result = "December"
+
+                print("")
+                print("Choose Days... ")
+                print("1", "2", "3", "4", "5", "6", "7", "8", "9", "10")
+                print("11", "12", "13", "14", "15", "16", "17", "18", "19", "20")
+                print("21", "22", "23", "24", "25", "26", "27", "28", "29", "30")
+                print("31")
+
+                daysId = int(input("Choose: "))
+
+                if daysId >= 31 and daysId <= 0:
+
+                    print("Invalid")
+                    exit()
+
+                else:
+                    arraysForDates.append(dateId_result)
+                    arraysForDays.append(daysId)
 
             print("")
+
+            
 
             timeId = input("time: ")
-            arraysForTime.append(timeId)
-
+            
+            print("")
+            print("A.M. or P.M? ")
             print("")
 
-            dayId = input("Days: ")
-            arraysForDays.append(dayId)
+            print("1. A.M.")
+            print("2. P.M.")
+
+            timeId2 = input("Choose: ")
+            if timeId2 == '1':
+                timeId = timeId, "a.m."
+                arraysForTime.append(timeId)
+            elif timeId2 == '2':
+                timeId = timeId, "p.m."
+                arraysForTime.append(timeId)
+            else:
+                return
+            
 
             print("")
 
             print("Sucessfully Submited")
+
+            print("")
+
+            input("Click Enter")
 
         elif choose == '2':
 
@@ -124,6 +409,10 @@ def appointment():
             else:
 
                 print("Invalid")
+            
+            print("")
+
+            input("Click Enter")
 
         elif choose == '3':
 
@@ -202,6 +491,9 @@ def appointment():
             else:
                 
                 print("Invalid")
+
+            print("")
+            input("Click Enter")
         elif choose == '4':
 
             print("Display Appointments: ", arraysForFirst)
@@ -237,8 +529,34 @@ def appointment():
                 print("Months:", dateId, dayId, "2024","Time:", timeId)
 
                 print("")
+            print("")
+            input("Click Enter")
 
+        elif choose == '5':
 
+            print("All Appointments")
+
+            for value, value1, value2, value3, value4, value5, value6, value7 in zip(arraysForFirst, arraysForLast, arraysForBirth, arraysForAge, arraysForMinors, arraysForDates, arraysForDays, arraysForTime):
+                
+                if len(arraysForFirst) > 0:
+                    print("")
+                    print("-------------------------------------------------")
+                    print("Personal Information")
+                    print("")
+                    print("First Name:", value, "Last Name:", value1)
+                    print("Birth-Year:", value2, "Age:", value3)
+                    print("You Are:", value4)
+                    print("")
+                    print("-------------------------------------------------")
+                    print("Appointments Details")
+                    print("")
+                    print("Months:", value5, value6, "Time:", value7)
+                    print("-------------------------------------------------")
+                    print("")
+                else:
+                    print("No Appoinments... ")
+            print("")
+            input("Click Enter")
         else:
 
             break
